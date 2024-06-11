@@ -1,0 +1,172 @@
+<html>
+    <head>
+        <title>Registration Page</title>
+    </head>
+    <style>
+             .container {
+                margin: 0 auto;
+                box-sizing: border-box;
+             }
+            
+               /* Smartphones (portait and landscape )----------  */
+             
+            @media screen and (min-width: 767px)  {
+                .container {
+                    width: 100%;
+                    padding: 5px 10px;
+                }
+                        }
+
+            /* tablets , iPads (portait and landscape )----------  */
+             
+         @media screen and (min-width: 768px) and (max-width: 1024px)  {
+               
+            .container {
+                    width: 750px;
+                    padding: 5px 10px;
+                }
+            }
+
+
+          /* Low resolution Desktops and laptops ----------  */
+             
+          @media screen and (min-width: 1024px)  {
+            .container {
+                    width: 980px;
+                    padding: 5px 15px;
+                }
+            }
+      
+          /* High  resolution Desktops and laptops ----------  */
+             
+          @media screen and (min-width: 1280px)  {
+            .container {
+                    width: 1200px;
+                    padding: 5px 20px;
+                }
+            }
+          
+        body {
+            background-size:cover;
+            color:white;
+        }
+        h1{
+            font-size: 35px;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        #video-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+        }
+    #registrationForm{
+        max-width: 300px;
+        margin: auto;
+        padding: 10px;
+        background-color: none;
+        border-radius: 5px;
+        backdrop-filter: blur(10px);
+        box-shadow: 10 0 10px rgba(8, 8, 8, 0.1);
+        box-sizing: border-box;
+    }
+
+button {
+	margin: 10px;
+	width: 70px;
+	padding: 10px;
+	border: none;
+	border-radius: 8px;
+	background: linear-gradient(45deg, #8686e3, #3b3494);
+	color: #fff;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+button:hover {
+	background: linear-gradient(45deg, #5d5e5d, #a4a4a7);
+}
+
+    </style>
+    <body>
+        <script>  
+    function validateForm() {
+      const radioButtons = document.getElementsByName('gender');
+      let checkedButton = false;
+
+      // Check if any radio button is checked
+      for (let i = 0; i < radioButtons.length; i++) {
+        if (radioButtons[i].checked) {
+          checkedButton = true;
+          break;
+        }
+      }
+      // If no radio button is checked
+      if (!checkedButton) {
+        alert("Please select a gender.");
+        return false;
+      }
+      return true;
+    }
+            function validateemail()  
+            {  
+            var myemail=document.myform.email.value;  
+            var atposition=myemail.indexOf("@");  
+            var dotposition=myemail.lastIndexOf(".");  
+            if (atposition<1 || dotposition<atposition+2 || dotposition+2>=myemail.length){  
+              alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+              return false;  
+              }  
+            }  
+            </script> 
+        <div class="video-container">
+            <video autoplay muted loop id="video-bg">
+                <source src="knyedit.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <right><br><br>
+        <form action="Login.html" id="Registrationform">
+            <div class="container">
+            <h1>Registration Form</h1>
+            First Name:<input type="text" name="name"><br><br>
+            Last Name:<input type="text" name="uname"><br><br>
+            Gender<br>
+            <input type="radio" name="Gender" value="M">Male
+            <input type="radio" name="Gender" value="F">Female
+            <input type="radio" name="Gender" value="O">Others<br><br>
+            Date of Birth:<input type="date" value="date"><br><br>
+            Mobile No.<input type="tel"  name="personal" id="per1" pattern="[0-9]{10}" title=""the ten digits number ><br><br>
+            Email:<input type="email" name="mail"><br><br>
+            Address:<textarea name="mydata" cols="20" row="100"></textarea><br><br>
+            Username:<input type="text" name="username"><br><br>
+            Password:<input type="password" name="Password"><br><br>
+            Confirm Password:<br><input type="text" name="Password"><br><br>
+            <input type="submit">
+            <h3>Already have an account?</h3>
+            <li><a href="./Login.html">Login/Signup</a></li>
+                </div>
+            </div>
+        </form>
+    </right>
+    </body>
+</html>

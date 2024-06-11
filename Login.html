@@ -1,0 +1,153 @@
+<html>
+    <head>
+        <title>Login Page</title>
+    </head>
+    <style>
+		.container {
+                margin: 0 auto;
+                box-sizing: border-box;
+             }
+            
+               /* Smartphones (portait and landscape )----------  */
+             
+            @media screen and (min-width: 767px)  {
+                .container {
+                    width: 100%;
+                    padding: 5px 10px;
+                }
+                        }
+
+            /* tablets , iPads (portait and landscape )----------  */
+             
+         @media screen and (min-width: 768px) and (max-width: 1024px)  {
+               
+            .container {
+                    width: 750px;
+                    padding: 5px 10px;
+                }
+            }
+
+
+          /* Low resolution Desktops and laptops ----------  */
+             
+          @media screen and (min-width: 1024px)  {
+            .container {
+                    width: 980px;
+                    padding: 5px 15px;
+                }
+            }
+      
+          /* High  resolution Desktops and laptops ----------  */
+             
+          @media screen and (min-width: 1280px)  {
+            .container {
+                    width: 1200px;
+                    padding: 5px 20px;
+                }
+            }
+          
+        body {
+            background-size:cover;
+            color:#fff
+        }
+        h1{
+            font-size: 30px;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        #video-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+        }
+    #LoginForm{
+        max-width: 300px;
+        margin: auto;
+        padding: 10px;
+        background-color: none;
+        border-radius: 5px;
+        backdrop-filter: blur(10px);
+        box-shadow: 10 0 10px rgba(8, 8, 8, 0.1);
+        box-sizing: border-box;
+    }
+	
+
+button {
+	margin: 10px;
+	width: 70px;
+	padding: 10px;
+	border: none;
+	border-radius: 8px;
+	background: linear-gradient(45deg, #8686e3, #3b3494);
+	color: #fff;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+button:hover {
+	background: linear-gradient(45deg, #5d5e5d, #a4a4a7);
+}
+
+    </style>
+          <script>
+            // User Validations
+    function loginValidation() {
+                // Ramesh
+      var uname = document.myform.username.value;
+                 //Ramesh@123
+      var password = document.myform.password.value;
+                if(uname==null || uname=="") {
+                  alert("Name cant be blank")
+                  return false;  
+               } else if (password.length<6){
+                  alert("Password Must be 6 letters")
+                  return false;
+               }  
+               return true                 
+            }           
+         </script>
+         </head>
+    <body>
+        <div class="video-container">
+            <video autoplay muted loop id="video-bg">
+                <source src="aotedit.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <center><br><br>
+			<form name="myform" action="example.html" 	id="Loginform" onsubmit="return loginValidation(this)">
+			<div class="container"></div>
+            <h1>Login/Signup</h1>
+                 User Name : <input type="text" name="username"> <br><br>
+                Password :  <input type="password" name="password"> <br><br>
+                         <input type="submit" value="Login">     
+                          
+            
+            <h3>Don't have an account?</h3>
+            <li><a href="./Registration.html">Register Here</a></li>
+                </div>
+			</div>
+            </form>
+        </form>
+	</center>
+    </body>
+</html>

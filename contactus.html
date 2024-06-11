@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body{
+        background-color: black;
+        color:white;
+    }
+    h1{
+        color: white;
+    }
+    body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        #video-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+        }
+        #contactus{
+        max-width: 300px;
+        margin: auto;
+        padding: 10px;
+        border-radius: 5px;
+        backdrop-filter: blur(10px);
+        box-shadow: 10 0 10px rgba(8, 8, 8, 0.1);
+        box-sizing: border-box;
+    }
+	
+</style>
+<body>
+    <div class="video-container">
+        <video autoplay muted loop id="video-bg">
+            <source src="jjkedit.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <center>
+    <header>
+        <br><br><br><br>
+        <h1>Contact Us</h1><br>
+    </header>
+    <main>
+        <section class="contact-form">
+            <form action="thankyoupage.html" method="post" id="contactus"><br>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject"><br><br>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" cols="20" rows="2" required></textarea><br><br>
+                
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    </center>
+</body>
+</html>

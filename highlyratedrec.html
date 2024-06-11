@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slideshow with Info</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+.padding {
+            padding: 10px; /* Space inside the container */
+            border: 1px solid black; /* Optional border for visualization */
+            background-color: black;
+            color:white;
+            font-size: 20px; /* Optional background color */
+        }
+.container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 600px; /* Adjust as needed */
+    margin-right: 40px; /* Space between slideshow and info */
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.mySlides {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+    width: 100%;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.info-container {
+    max-width: 800px; /* Adjust as needed */
+    padding: 10px;
+    background-color: #f1f1f1; /* Optional: add background color for the info section */
+    border: 1px solid #ccc; /* Optional: add border for the info section */
+}
+
+.info-slide {
+    display: none;
+}
+
+/* Style the dots */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+.dot:hover {
+    background-color: #717171;
+}
+</style>
+<body><center>
+    <h1>Highly Rated</h1></center>
+    <div class="padding">
+        Top 7</div><br>
+    <div class="container">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="fullmetal alchemist.jpg" alt="Image 1" width="500" height="400">
+            </div>
+            <div class="mySlides fade">
+                <img src="one punch man.jpg" alt="Image 2" width="500" height="400">
+            </div>
+            <div class="mySlides fade">
+                <img src="deathnote.jpg" alt="Image 3" width="500" height="400">
+            </div>
+            <div class="mySlides fade">
+                <img src="cowboybebop.jpg" alt="Image 3" width="500" height="400">
+            </div>
+            <div class="mySlides fade">
+                <img src="hunterxhunter.jpg" alt="Image 3" width="500" height="400">
+            </div>
+            <div class="mySlides fade">
+                <img src="steinsgate.jpeg" alt="Image 3" width="500" height="400">
+            </div>
+            <div class="mySlides fade">
+                <img src="aot.jpg" alt="Image 3" width="500" height="400">
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+        <div class="info-container">
+            <div class="info-slide">
+                <h2>FullMetal Alchemist</h2>
+                <p>About</p>
+                <p>In the fictitious country of Amestris, two young brothers, Edward and Alphonse Elric, are bestowed with the gift of alchemy - the supernatural ability to transform matter. This becomes a burden after their mother dies from an illness before they figure out how to use their alchemic skills. </p>
+                <p>First episode date: 4 October 2003 (Japan)</p>
+                <p>Adapted from: Fullmetal Alchemist</p>
+                <p>Directed by: Seiji Mizushima</p>
+                <p>Genre: Adventure; Dark fantasy; Steampunk</p>
+                <p>Original network: JNN (MBS, TBS)</p>
+                <p>Produced by: Masahiko Minami; Hirō Maruyama; Ryo Ōyama</p>
+                <p>Rating: 4.9/5</p>
+            </div>
+            <div class="info-slide">
+                <h2>One Punch Man</h2>
+                <p>About</p>
+                <p>Saitama is a strong superhero who defeats villains with just a single punch. Over time, however, he grows bored with the absence of a challenging fight.</p>
+                <p>First episode date: 4 October 2015 (Japan)</p>
+                <p>Rating: 4.8/5</p>
+            </div>
+        <div class="info-slide">
+                <h2>Death Note</h2>
+                <p>About</p>
+                <p>Death Note is a Japanese manga series written by Tsugumi Ohba and illustrated by Takeshi Obata. It was serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump from December 2003 to May 2006, with its chapters collected in 12 tankōbon volumes.</p>
+                <p>Genres: Mystery, Psychological thriller, Thriller</p>
+                <p>Adaptations: Death Note (2006), Death Note (2017)·</p>
+                <p>Rating: 4.8/5</p>
+            </div>
+            <div class="info-slide">
+                <h2>Cowboy Bepop</h2>
+                <p>About</p>
+               <p>Aboard the spaceship Bebop, a bounty hunter and his group of skilled comrades embark on adventures across the Solar System to capture criminals.</p>
+               <p>Program creators: Shinichirō Watanabe, Hajime Yatate, Bandai Namco Filmworks, Bandai Visual</p>
+               <p>Demographic: Shōjo</p>
+               <p>Directed by: Shinichirō Watanabe</p>
+               <p>English publisher: NA: Tokyopop</p>
+               <p>Genre: Neo-noir; Space Western;</p>
+               <p>Rating: 4.9/5</p>
+            </div>
+            <div class="info-slide">
+                <h2>HunterXHunter</h2>
+                <p>About</p>
+                <p>Gon Freecss is on a mission to train himself as a hunter just like his father. He reunites with his father, who is alive and an accomplished hunter too.</p>
+                <p>First episode date: 2 October 2011 (Japan)</p>
+                <p>Adapted from: Hunter × Hunter</p>
+                <p>Rating: 4.9/5</p>
+            </div>
+            <div class="info-slide">
+                <h2>Steins Gate</h2>
+                <p>About</p>
+              <p>A group of friends creates a machine capable of sending messages across time, and cause ripples through the past and present.</p>
+              <p>Directed by: Hiroshi Hamasaki; Takuya Satō; Tomoki Kobayashi (OVA)</p>
+              <p>English network: US: Crunchyroll Channel</p>
+              <p>Genre: Psychological thriller; Science fiction;</p>
+              <p>Original network: AT-X, CTC, Sun TV, TV Aichi, TV Saitama, tvk, Tokyo MX </p>
+              <p>Original run: April 6, 2011 – September 14, 2011</p>
+              <p>Rating :4.8/5</p>
+            </div>
+            <div class="info-slide">
+                <h2>Attack on Titan</h2>
+                <p>About</p>
+                <p>Humankind constructs lofty walls to safeguard itself from immense creatures, the Titans. It battles to regain its land captured by the Titans which is not easy.</p>
+      <p>First episode date: 7 April 2013 (Japan)</p>
+      <p>Final episode date: 19 November 2023</p>
+      <p>Adapted from: Attack on Titan</p>
+      <p>English network: AU: SBS 2; SEA: Aniplus Asia; US: Adult Swim (Toonami)</p>
+      <p>Genre: Action; Dark fantasy; Post-apocalyptic;</p>
+      <p>Rating: 4.9/5</p>
+            </div>
+            <!-- Add more info slides as needed -->
+        </div>
+    </div>
+
+    <br>
+    <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <!-- Add more dots as needed -->
+    </div>
+
+    <script>
+        let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let infoSlides = document.getElementsByClassName("info-slide");
+    let dots = document.getElementsByClassName("dot");
+    
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+        infoSlides[i].style.display = "none";
+    }
+    
+    slideIndex++;
+    
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    
+    slides[slideIndex-1].style.display = "block";  
+    infoSlides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    
+    setTimeout(showSlides, 2000); // Change image and info every 2 seconds
+}
+
+    </script>
+</body>
+</html>

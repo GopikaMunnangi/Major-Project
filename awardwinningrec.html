@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slideshow with Info</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+.padding {
+            padding: 10px; /* Space inside the container */
+            border: 1px solid black; /* Optional border for visualization */
+            background-color: black;
+            color:white;
+            font-size: 20px; /* Optional background color */
+        }
+.container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 600px; /* Adjust as needed */
+    margin-right: 40px; /* Space between slideshow and info */
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.mySlides {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+    width: 100%;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.info-container {
+    max-width: 800px; /* Adjust as needed */
+    padding: 10px;
+    background-color: #f1f1f1; /* Optional: add background color for the info section */
+    border: 1px solid #ccc; /* Optional: add border for the info section */
+}
+
+.info-slide {
+    display: none;
+}
+
+/* Style the dots */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+.dot:hover {
+    background-color: #717171;
+}
+</style>
+<body><center>
+    <h1>Award Winning</h1></center>
+    <div class="padding">
+        Top 7</div><br>
+    <div class="container">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="jjk.jpg" alt="Image 1" width="500" height="400">
+            </div>
+            <div class="mySlides fade">
+                <img src="one piece.jpg" alt="Image 2" width="500" height="400">
+            </div>
+            <div class="mySlides fade">
+                <img src="chainsawman.jpg" alt="Image 3" width="500" height="400">
+            </div>
+            <div class="mySlides fade">
+                <img src="suzume.jpg" alt="Image 3" width="500" height="400">
+            </div>
+            <div class="mySlides fade">
+                <img src="buddydaddies.jpg" alt="Image 3" width="500" height="400">
+            </div>
+            <div class="mySlides fade">
+                <img src="kny.jpg" alt="Image 3" width="500" height="400">
+            </div>
+            <div class="mySlides fade">
+                <img src="horimiya.jpe" alt="Image 3" width="500" height="400">
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+        <div class="info-container">
+            <div class="info-slide">
+                <h2>Jujutsu Kaisen</h2>
+                <p>About</p>
+                <p>Jujutsu Kaisen is a Japanese manga series written and illustrated by Gege Akutami. It has been serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump since March 2018, with its chapters collected in 26 tankōbon volumes as of April 2024. Wikipedia</p>
+      <p>Authors: Gege Akutami, Ballad Kitaguni</p>
+      <p>Genres: Shonen manga, Dark fantasy</p>
+      <p>Magazine: Weekly Shōnen Jump</p>
+      <p>Directed by: Sunghoo Park (S1); Shōta Goshozono (S2)</p>
+      <p>English publisher: NA: Viz Media</p>
+      <p>Rating: 4.9/5</p>
+            </div>
+            <div class="info-slide">
+                <h2>One Piece</h2>
+                <p>About</p>
+                <p>One Piece is a Japanese manga series written and illustrated by Eiichiro Oda. It has been serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump since July 1997, with its individual chapters compiled in 108 tankōbon volumes as of March 2024.</p>
+      <p>Author: Eiichiro Oda</p>
+      <p>Genres: Shonen manga, Action manga, Fantasy, Comedy</p>
+      <p>Magazine: Weekly Shōnen Jump</p>
+      <p>English publisher: AUS: Madman Entertainment; NA/UK: Viz Media</p>
+      <p>Original run: July 22, 1997 – present</p>
+      <p>Rating: 4.9/5</p>
+            </div>
+        <div class="info-slide">
+                <h2>Chainsaw Man</h2>
+                <p>About</p>
+                <p>Betrayed and killed, a teenager named Denji gets revived as Chainsaw Man, a soul with a devil's heart.</p>
+      <p>First episode date: 12 October 2022 (Japan)</p>
+      <p>Adapted from: Chainsaw Man</p>
+      <p>Rating: 4.9/5</p>
+            </div>
+            <div class="info-slide">
+                <h2>Suzume</h2>
+                <p>About</p>
+                <p>As the skies turn red and the planet trembles, Japan stands on the brink of disaster. However, a determined teenager named Suzume sets out on a mission to save her country. Able to see supernatural forces that others cannot, it's up to her to close the mysterious doors that are spreading chaos across the land. A perilous journey awaits as the fate of Japan rests on her shoulders.</p>
+                <p>Release date: 11 November 2022 (Japan)</p>
+                <p>Director: Makoto Shinkai</p>
+                <p>Music by: Radwimps; Kazuma Jinnouchi</p>
+                <p>Producers: Kôichirô Itô, Genki Kawamura, Wakana Okamura</p>
+                <p>Distributed by: Toho Co., Ltd.</p>
+                <p>Box office: US$316.8 million</p>
+                <p>Rating: 4.9/5</p>
+            </div>
+            <div class="info-slide">
+                <h2>Buddy Daddies</h2>
+                <p>About</p>
+                <p>Assassins Kazuki Kurusu and Rei Suwa meet Miri, a girl looking for her father on Christmas Day; Kazuki and Rei take Miri in to take care of her.</p>
+                <p>First episode date: 7 January 2023 (Japan)</p>
+                <p>Directed by: Yoshiyuki Asai</p>
+                <p>English network: US: Crunchyroll Channel</p>
+                <p>Original network: Tokyo MX, GYT, GTV, BS11, ABC, Mētele</p>
+                <p>Studio: P.A. Works</p>
+                <p>Rating: 4.9/5</p>
+            </div>
+            <div class="info-slide">
+                <h2>Demon Slayer</h2>
+                <p>About</p>
+                <p>A youth begins a quest to fight demons and save his sister after finding his family slaughtered and his sister turned into a demon.</p>
+                <p>First episode date: 6 April 2019 (Japan)</p>
+                <p>Adapted from: Demon Slayer: Kimetsu no Yaiba</p>
+                <p>Directed by: Haruo Sotozaki</p>
+                <p>English network: US: Adult Swim (Toonami)</p>
+                <p>Genre: Adventure; Dark fantasy; Martial arts</p>
+                <p>Rating: 4.9/5</p>
+            </div>
+            <div class="info-slide">
+                <h2>Horimiya</h2>
+                <p>About</p>
+                <p>Hori-san to Miyamura-kun is a Japanese manga series written and illustrated by Hiroki Adachi, under the pseudonym Hero. It was self-published as a webcomic on Hero's website, Dokkai Ahen, from February 2007 to December 2011 in a four-panel format. </p>
+                <p>Genre: Romantic comedy</p>
+                <p>English network: SEA: Animax Asia; US: Crunchyroll Channel;</p>
+                <p>English publisher: Yen Press</p>
+                <p>Magazine: Monthly G Fantasy</p>
+                <p>Original network: Tokyo MX, GYT, GTV, BS11, MBS</p>
+                <p>Released: September 26, 2012 – May 25, 2021</p>
+                <p>Rating: 4.9/5</p>
+            </div>
+            <!-- Add more info slides as needed -->
+        </div>
+    </div>
+
+    <br>
+    <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <!-- Add more dots as needed -->
+    </div>
+
+    <script>
+        let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let infoSlides = document.getElementsByClassName("info-slide");
+    let dots = document.getElementsByClassName("dot");
+    
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+        infoSlides[i].style.display = "none";
+    }
+    
+    slideIndex++;
+    
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    
+    slides[slideIndex-1].style.display = "block";  
+    infoSlides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    
+    setTimeout(showSlides, 2000); // Change image and info every 2 seconds
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anime List</title>
+<style>
+        /* CSS for styling the navigation menu */
+        .container {
+                margin: 0 auto;
+                box-sizing: border-box;
+             }
+            
+               /* Smartphones (portait and landscape )----------  */
+             
+            @media screen and (min-width: 767px)  {
+                .container {
+                    width: 100%;
+                    padding: 5px 10px;
+                    display: grid;
+                }
+                .image-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+            /* tablets , iPads (portait and landscape )----------  */
+             
+         @media screen and (min-width: 768px) and (max-width: 1024px)  {
+               
+            .container {
+                    width: 750px;
+                    padding: 5px 10px;
+                    display: grid;
+                }
+                .image-grid {
+        grid-template-columns: repeat(auto-fill, 1fr);
+    }
+}
+          /* Low resolution Desktops and laptops ----------  */
+             
+          @media screen and (min-width: 1024px)  {
+            .container {
+                    width: 980px;
+                    padding: 5px 15px;
+                    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 3 columns */
+    gap: 20px;
+
+                }
+            }
+      
+          /* High  resolution Desktops and laptops ----------  */
+             
+          @media screen and (min-width: 1280px)  {
+            .container {
+                    width: 1200px;
+                    padding: 5px 20px;
+                    display: grid;
+                   grid-template-columns: repeat(auto-fill, 1fr); /* 3 columns */
+                   gap: 20px;
+                }
+            }
+          
+        body {
+            background-color: black;
+            background-size: cover;
+        }
+        nav {
+            background-color: white;
+            color: black;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color:black;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        h1{
+            color: white;
+            font-size:60px;
+        }
+        p{
+            color: white;
+        }
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 1fr); /* 3 columns */
+    gap: 20px; /* gap between images */
+  }
+  .image-item img {
+    width: 100%; /* make images fill their container */
+    cursor: pointer;
+  }
+button {
+    margin-left: 1150px;
+    width: 90px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #8686e3, #3b3494);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+            <center>
+            <h1>Ohayo.com</h1>
+            <p>Konnichiwa..Welcome to our Page..</p>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="./Registration.html">Register</a></li>
+                <li><a href="./Login.html">Login/Signup</a></li>
+                <li><a href="./anilist.html">AnimeList</a></li>
+                <li><a href="./recommended.html">Recommended</a></li>
+                <li><a href="./categories.html">categories</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./contactus.html">Contact</a></li>
+            </ul>
+        </nav>
+        </center><br><br>
+<div class="image-grid">
+  <div class="image-item"><img src="myheroacademia.jpg" alt="Image 1" width="50" height="350" onclick="openPage('page1.html')"></div>
+  <div class="image-item"><img src="one punch man.jpg" alt="Image 2" width="50" height="350" onclick="openPage('page2.html')"></div>
+  <div class="image-item"><img src="jjk.jpg" alt="Image 3" width="50" height="350" onclick="openPage('jjkfile.html')"></div>
+  <div class="image-item"><img src="oshinoko.jpg" alt="Image 1" width="50" height="350" onclick="openPage('oshinoko.html')"></div>
+  <div class="image-item"><img src="detectiveconan.jpg" alt="Image 2" width="50" height="350" onclick="openPage('page2.html')"></div>
+  <div class="image-item"><img src="your name.jpg" alt="Image 3" width="50" height="350" onclick="openPage('page.html')"></div>
+  <div class="image-item"><img src="chainsawman.jpg" alt="Image 1" width="50" height="350" onclick="openPage('chainsawman.html')"></div>
+  <div class="image-item"><img src="kny.jpg" alt="Image 2" width="50" height="350" onclick="openPage('knyfile.html')"></div>
+  <div class="image-item"><img src="iwanttoeatyourpancreas.jpg" alt="Image 3" width="50" height="350" onclick="openPage('page3.html')"></div>
+  <div class="image-item"><img src="naruto1.jpg" alt="Image 1" width="50" height="350" onclick="openPage('naruto.html')"></div>
+  <div class="image-item"><img src="fullmetal alchemist.jpg" alt="Image 2" width="50" height="350" onclick="openPage('page2.html')"></div>
+  <div class="image-item"><img src="aot.jpg" alt="Image 3" width="50" height="350" onclick="openPage('aot.html')"></div>
+  <div class="image-item"><img src="one piece.jpg" alt="Image 3" width="50" height="350" onclick="openPage('onepiece.html')"></div>
+  <div class="image-item"><img src="deathnote.jpg" alt="Image 1" width="50" height="350" onclick="openPage('page1.html')"></div>
+  <div class="image-item"><img src="tokyorevengers.jpe" alt="Image 2" width="50" height="350" onclick="openPage('page2.html')"></div>
+  <div class="image-item"><img src="dragonballz.jpg" alt="Image 3" width="50" height="350" onclick="openPage('page3.html')"></div>
+  <div class="image-item"><img src="tokyoghoul.jpg" alt="Image 1" width="50" height="350" onclick="openPage('page1.html')"></div>
+  <div class="image-item"><img src="your lie in april.jpg" alt="Image 2" width="50" height="350" onclick="openPage('yourlieinapril.html')"></div>
+  <div class="image-item"><img src="noragami.jpg" alt="Image 3" width="50" height="350" onclick="openPage('page3.html')"></div>
+  <div class="image-item"><img src="blackbutler.jpg" alt="Image 2" width="50" height="350" onclick="openPage('page2.html')"></div>
+  <div class="image-item"><img src="7thtimeloop.webp" alt="Image 3" width="50" height="350" onclick="openPage('7thtimeloop.html')"></div>
+  <div class="image-item"><img src="bungostraydogs.jpg" alt="Image 2" width="50" height="350" onclick="openPage('page2.html')"></div>
+  <div class="image-item"><img src="spyxfamily.jpg" alt="Image 3" width="50" height="350" onclick="openPage('spyxfamily.html')"></div>
+  <div class="image-item"><img src="suzume.jpg" alt="Image 2" width="50" height="350" onclick="openPage('suzume.html')"></div>
+  <div class="image-item"><img src="hunterxhunter.jpg" alt="Image 3" width="50" height="350" onclick="openPage('page3.html')"></div>
+  <div class="image-item"><img src="sao.jpg" alt="Image 2" width="50" height="350" onclick="openPage('page2.html')"></div>
+  <div class="image-item"><img src="blueexorcist.jpe" alt="Image 3" width="50" height="350" onclick="openPage('page3.html')"></div>
+  <div class="image-item"><img src="boruto.jpg" alt="Image 2" width="50" height="350" onclick="openPage('page2.html')"></div>
+  <div class="image-item"><img src="fairytale.jpe" alt="Image 3" width="50" height="350" onclick="openPage('page3.html')"></div>
+  <div class="image-item"><img src="aoharuride.jpg" alt="Image 2" width="50" height="350" onclick="openPage('page2.html')"></div>
+  <div class="image-item"><img src="classroomoftheelite.jpg" alt="Image 3" width="50" height="350" onclick="openPage('page3.html')"></div>
+  <div class="image-item"><img src="bananafish.jpg" alt="Image 2" width="50" height="350" onclick="openPage('page2.html')"></div>
+  <div class="image-item"><img src="blackclover.jpe" alt="Image 3" width="50" height="350" onclick="openPage('page3.html')"></div>
+  <div class="image-item"><img src="horimiya.jpe" alt="Image 3" width="50" height="350" onclick="openPage('page3.html')"></div>
+  <div class="image-item"><img src="haikyu.jpe" alt="Image 2" width="50" height="350" onclick="openPage('page2.html')"></div>
+  <div class="image-item"><img src="bochhitherock.jpg" alt="Image 3" width="50" height="350" onclick="openPage('page3.html')"></div>
+  <div class="image-item"><img src="jojo.jpeg" alt="Image 3" width="50" height="350" onclick="openPage('page3.html')"></div>
+  <div class="image-item"><img src="berserk.jpeg" alt="Image 3" width="50" height="350" onclick="openPage('page3.html')"></div>
+  <div class="image-item"><img src="parasyte.jpeg" alt="Image 2" width="50" height="350" onclick="openPage('page2.html')"></div>
+  <div class="image-item"><img src="promisedneverland.jpeg" alt="Image 3" width="50" height="350" onclick="openPage('page3.html')"></div>
+</div><br>
+<button class="next-page-button" onclick="goToNextPage()">Next Page</button>
+<script>
+  function openPage(url) {
+    window.open(url, '_blank');
+  }
+  function goToNextPage() {
+            // Add the URL of the next page here
+            window.location.href = 'nextpage1.html';
+        }
+</script>
+
+</body>
+</html>

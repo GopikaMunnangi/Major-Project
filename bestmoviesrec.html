@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slideshow with Info</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+.padding {
+            padding: 10px; /* Space inside the container */
+            border: 1px solid black; /* Optional border for visualization */
+            background-color: black;
+            color:white;
+            font-size: 20px; /* Optional background color */
+        }
+.container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 600px; /* Adjust as needed */
+    margin-right: 40px; /* Space between slideshow and info */
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.mySlides {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+    width: 100%;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.info-container {
+    max-width: 800px; /* Adjust as needed */
+    padding: 10px;
+    background-color: #f1f1f1; /* Optional: add background color for the info section */
+    border: 1px solid #ccc; /* Optional: add border for the info section */
+}
+
+.info-slide {
+    display: none;
+}
+
+/* Style the dots */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+.dot:hover {
+    background-color: #717171;
+}
+</style>
+<body><center>
+    <h1>Best Movies</h1></center>
+    <div class="padding">
+        Top 7</div><br>
+    <div class="container">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="spiritedaway.jpeg" alt="Image 1" width="500" height="400">
+            </div>
+            <div class="mySlides fade">
+                <img src="your name.jpg" alt="Image 2" width="500" height="400">
+            </div>
+            <div class="mySlides fade">
+                <img src="graveofthefireflies.jpeg" alt="Image 3" width="500" height="400">
+            </div>
+            <div class="mySlides fade">
+                <img src="asilentvoice.jpg" alt="Image 3" width="500" height="400">
+            </div>
+            <div class="mySlides fade">
+                <img src="weatheringwithyou.jpg" alt="Image 3" width="500" height="400">
+            </div>
+            <div class="mySlides fade">
+                <img src="wolfchildren.jpeg" alt="Image 3" width="500" height="400">
+            </div>
+            <div class="mySlides fade">
+                <img src="suzume.jpg" alt="Image 3" width="500" height="400">
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+        <div class="info-container">
+            <div class="info-slide">
+                <h2>Spirited Away</h2>
+                <p>About</p>
+                <p>Ten-year-old Chihiro and her parents end up at an abandoned amusement park inhabited by supernatural beings. Soon, she learns that she must work to free her parents who have been turned into pigs.</p>
+                <p>Release date: 20 July 2001 (Japan)</p>
+                <p>Director: Hayao Miyazaki</p>
+                <p>Distributed by: Walt Disney Pictures, Toho Co., Ltd., StudioCanal UK</p>
+                <p>Box office: $395.8 million</p>
+                <p>Cinematography: Atsushi Okui</p>
+                <p>Edited by: Takeshi Seyama</p>
+                <p>Rating: 8.6/10</p>
+            </div>
+            <div class="info-slide">
+                <h2>Your Name</h2>
+                <p>About</p>
+                <p>Two teenagers share a profound, magical connection upon discovering they are swapping bodies. Things manage to become even more complicated when the boy and girl decide to meet in person.</p>
+                <p>Release date: 26 August 2016 (Japan)</p>
+                <p>Director: Makoto Shinkai</p>
+                <p>Story by: Makoto Shinkai</p>
+                <p>Producers: Kôichirô Itô, Noritaka Kawaguchi, Katsuhiro Takei, Genki Kawamura</p>
+                <p>Distributed by: Toho Co., Ltd.</p>
+                <p>Rating: 8.4/10</p>
+            </div>
+        <div class="info-slide">
+                <h2>Grave Of The Fireflies</h2>
+                <p>About</p>
+                <p>Two siblings struggle to stay together and survive during the outbreak of World War II.</p>
+                <p>Release date: 16 April 1988 (Japan)</p>
+                <p>Director: Isao Takahata</p>
+                <p>Screenplay: Isao Takahata</p>
+                <p>Story by: Akiyuki Nosaka</p>
+                <p>Distributed by: Toho Co., Ltd., StudioCanal UK</p>
+                <p>Adapted from: Grave of the Fireflies</p>
+                <p>Rating: 8.5/10</p>
+            </div>
+            <div class="info-slide">
+                <h2>A Silent Voice</h2>
+                <p>About</p>
+                <p>A grade-school student with a hearing impairment is bullied and transfers to another school. Years later, the former bully is tormented by his behaviour and sets out to make amends.</p>
+                <p>Release date: 17 September 2016 (Japan)</p>
+                <p>Director: Naoko Yamada</p>
+                <p>Distributed by: Shochiku</p>
+                <p>Adapted from: A Silent Voice
+                </p>
+                <p>Box office: $31.6 million</p>
+                <p>Rating: 8.1/10</p>
+            </div>
+            <div class="info-slide">
+                <h2>Weathering with You</h2>
+                <p>About</p>
+                <p>In Tokyo, a runaway high school student facing financial struggles ends up with a job at a small-time publisher. One day, he meets a young girl who has the ability to control the weather.</p>
+                <p>Release date: 11 October 2019 (India)</p>
+                <p>Director: Makoto Shinkai</p>
+                <p>Story by: Makoto Shinkai</p>
+                <p>Screenplay: Makoto Shinkai</p>
+                <p>Distributed by: Toho Co., Ltd., Camera Film</p>
+                <p>Box office: US$193.8 million</p>
+                <p>Rating: 7.5/10</p>
+            </div>
+            <div class="info-slide">
+                <h2>Wolf Children</h2>
+                <p>About</p>
+                <p>Hana is devastated after her lover, who was a werewolf, dies in an accident. To raise her two werewolf children away from prying eyes, she decides to move to her lover's hometown.</p>
+                <p>Release date: 21 July 2012 (Japan)</p>
+                <p>Director: Mamoru Hosoda</p>
+                <p>Story by: Mamoru Hosoda</p>
+                <p>Distributed by: Toho Co., Ltd.</p>
+                <p>Box office: $55 million
+                </p>
+                <p>Rating: 8.1/10</p>
+            </div>
+            <div class="info-slide">
+                <h2>Suzume</h2>
+                <p>About</p>
+                <p>As the skies turn red and the planet trembles, Japan stands on the brink of disaster. However, a determined teenager named Suzume sets out on a mission to save her country. Able to see supernatural forces that others cannot, it's up to her to close the mysterious doors that are spreading chaos across the land. A perilous journey awaits as the fate of Japan rests on her shoulders.</p>
+                <p>Release date: 11 November 2022 (Japan)</p>
+                <p>Director: Makoto Shinkai</p>
+                <p>Music by: Radwimps; Kazuma Jinnouchi</p>
+                <p>Producers: Kôichirô Itô, Genki Kawamura, Wakana Okamura</p>
+                <p>Distributed by: Toho Co., Ltd.</p>
+                <p>Box office: US$316.8 million</p>
+                <p>Rating: 4.9/5</p>
+            </div>
+            <!-- Add more info slides as needed -->
+        </div>
+    </div>
+
+    <br>
+    <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span>
+        <span class="dot"></span> 
+        <!-- Add more dots as needed -->
+    </div>
+
+    <script>
+        let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let infoSlides = document.getElementsByClassName("info-slide");
+    let dots = document.getElementsByClassName("dot");
+    
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+        infoSlides[i].style.display = "none";
+    }
+    
+    slideIndex++;
+    
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    
+    slides[slideIndex-1].style.display = "block";  
+    infoSlides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    
+    setTimeout(showSlides, 2000); // Change image and info every 2 seconds
+}
+
+    </script>
+</body>
+</html>
